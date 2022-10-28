@@ -2,7 +2,7 @@
  "name": "id_card",
  "version": "0.1.0",
  "private": true,
- "homepage": "https://github.com/TanmayKumar-EngStud/ID-Card-Generator.git",
+ "homepage": "https://github.com/TanmayKumar-EngStud/ID-Card-Generator",
  "dependencies": {
   "@react-pdf/renderer": "^3.0.0",
   "@reduxjs/toolkit": "^1.8.6",
