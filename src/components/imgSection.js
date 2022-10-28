@@ -39,6 +39,21 @@ export let ImgSection = (props) => {
  let erase = () => {
   setDataURL("");
  };
+ let operate = () => {
+  let inp = document.querySelector('.imgInfo input[type="file"]');
+  inp.click();
+ };
+ let setImgURL = (event) => {
+  let file = event.target.files[0];
+  let fileReader = new FileReader();
+  fileReader.onload = () => {
+   let fileURL = fileReader.result;
+   setDataURL(fileURL);
+   dispatch(add({ URL: fileURL }));
+  };
+  fileReader.readAsDataURL(file);
+  event.target.classList.remove("active");
+ };
  if (dataURL === "") {
   return (
    <div
@@ -51,7 +66,8 @@ export let ImgSection = (props) => {
     <h4>{props.h4}</h4>
     <i className="fa-solid fa-cloud-arrow-up"></i>
     <h6>-or-</h6>
-    <button>Upload file</button>
+    <input type="file" hidden onChange={setImgURL} readOnly />
+    <button onClick={operate}>Upload file</button>
    </div>
   );
  }

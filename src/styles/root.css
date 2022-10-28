@@ -21,8 +21,9 @@ body {
 .mainDiv {
  box-shadow: 0 0 5px;
  margin: 10px auto;
- width: 70vw;
+ width: 90vw;
  padding: 15px;
+ position: relative;
  background: linear-gradient(
   27deg,
   rgba(254, 203, 203, 0.595),
@@ -57,7 +58,7 @@ body {
 }
 /*                  Horizontal rule Styling                  */
 
-hr {
+.getInfo hr {
  overflow: visible; /* For IE */
  padding: 0;
  margin-top: 3.5em;
@@ -66,7 +67,7 @@ hr {
  color: #333;
  text-align: center;
 }
-hr:after {
+.getInfo hr:after {
  content: "§";
  display: inline-block;
  position: relative;
@@ -109,6 +110,8 @@ hr:after {
  justify-content: space-evenly;
  flex-direction: column;
  height: 350px;
+ width: 300px;
+ text-align: center;
  border: 3px dotted rgb(49, 207, 207);
  border-radius: 5px;
  margin-right: 55px;
@@ -123,11 +126,13 @@ hr:after {
 }
 .mainDiv .imgInfo img {
  height: 100%;
+ width: 100%;
  object-fit: cover;
 }
 .mainDiv .imgInfo .crossSign {
  position: absolute;
- right: 0%;
+ top: 0;
+ right: 0;
 }
 .mainDiv .imgInfo .crossSign i {
  padding-top: 5px;

@@ -1,12 +1,14 @@
 import { ImgSection } from "./imgSection";
-
+import { useState } from "react";
 // Calling the redux important functions.
 import { add } from "../storage/userData";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { FloatingWindow } from "./FloatingWindow";
 
 export const GeneralInstructions = () => {
  const dispatch = useDispatch();
- const x = useSelector((state) => state.user.value);
+ let [window, setWindow] = useState(false);
+ // const x = useSelector((state) => state.user);
  let bake = () => {
   let data = {
    name: document.querySelector("input#name").value,
@@ -20,12 +22,13 @@ export const GeneralInstructions = () => {
     alert("Fill all the information!");
     return;
    }
-   dispatch(add(data));
   }
-
-  console.log(x);
+  dispatch(add(data));
+  setWindow(true);
  };
-
+ let closeWindow = (value) => {
+  setWindow(value);
+ };
  return (
   <>
    <div className="genInfo">
@@ -37,11 +40,12 @@ export const GeneralInstructions = () => {
      <input type="email" id="email" placeholder="example@gmail.com" />
      <input type="text" id="address" placeholder="Address" />
     </div>
-    <ImgSection id="personal" h4="Drag n Drop Personal Photo here!" />
+    <ImgSection id="personal" h4="Drag n Drop Photo here!" />
    </div>
 
    <hr />
    <button onClick={bake}>Submit</button>
+   <FloatingWindow display={window} close={closeWindow} />
   </>
  );
 };
