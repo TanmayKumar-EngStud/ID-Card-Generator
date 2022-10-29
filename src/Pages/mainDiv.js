@@ -1,4 +1,4 @@
-import { GeneralInstructions } from "./components/generalInstructions";
+import { GeneralInstructions } from "../components/generalInstructions";
 
 export const MainDiv = () => {
  return (

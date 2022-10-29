@@ -12,7 +12,11 @@ body {
  );
  width: 100vw;
 }
-
+@media screen and (max-height: 100vh) {
+ body {
+  height: 100vw;
+ }
+}
 .Heading {
  text-align: center;
  font-weight: bold;
