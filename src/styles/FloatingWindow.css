@@ -81,42 +81,48 @@
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .userID {
  position: absolute;
+ width: 30%;
  z-index: 2;
- top: 33%;
+ top: 35.5%;
  left: 65%;
- transform: translate(0%, -50%);
+ transform: translate(0%, -100%);
+ line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .name {
  position: absolute;
+ width: 30%;
  z-index: 2;
- top: 42.5%;
+ top: 46%;
  left: 65%;
- transform: translate(0%, -50%);
+ transform: translate(0%, -100%);
+ line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .DOB {
  position: absolute;
-
+ width: 30%;
  z-index: 2;
- top: 54%;
+ top: 57%;
  left: 65%;
- transform: translate(0%, -50%);
+ transform: translate(0%, -100%);
+ line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .Email {
  position: absolute;
-
+ width: 30%;
  z-index: 2;
- top: 64%;
+ top: 67%;
  left: 65%;
- transform: translate(0%, -50%);
+ transform: translate(0%, -100%);
+ line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .Address {
  position: absolute;
 
  width: 30%;
  z-index: 2;
- top: 75%;
+ top: 77.5%;
  left: 65%;
- transform: translate(0%, -50%);
+ transform: translate(0%, -100%);
  line-height: 0.8em;
 }
 
@@ -131,14 +137,13 @@
   font-size: 6vw;
  }
  .window .windowContent .imgViewer .dummyComponent .relativeComponent {
-  font-size: 2.93vw;
+  font-size: 2vw;
  }
  .window button {
-  font-size: 2.93vw;
+  font-size: 2vw;
  }
  .window .windowContent i {
   position: absolute;
-
   top: 0;
   right: 0;
   font-size: 4vw;
