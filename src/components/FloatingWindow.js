@@ -1,5 +1,6 @@
 import "../styles/FloatingWindow.css";
 import { useSelector } from "react-redux";
+
 // importing sample id card image
 import IDcard from "./IDcard.png";
 export const FloatingWindow = (props) => {
@@ -17,14 +18,16 @@ export const FloatingWindow = (props) => {
      <div className="imgViewer">
       <img src={IDcard} alt="ID card generated" />
       <div className="dummyComponent">
-       <div className="imgWindow">
-        <img src={data.URL} alt="user" />
+       <div className="relativeComponent">
+        <div className="imgWindow">
+         <img src={data.URL} alt="user" />
+        </div>
+        <div className="userID">{data["User Id"]}</div>
+        <div className="name">{data["name"]}</div>
+        <div className="DOB">{data["DOB"]}</div>
+        <div className="Email">{data["Email"]}</div>
+        <div className="Address">{data["Address"]}</div>
        </div>
-       <div className="userID">{data["User Id"]}</div>
-       <div className="name">{data["name"]}</div>
-       <div className="DOB">{data["DOB"]}</div>
-       <div className="Email">{data["Email"]}</div>
-       <div className="Address">{data["Address"]}</div>
       </div>
      </div>
      <div className="buttonGroup">

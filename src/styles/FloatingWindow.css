@@ -48,59 +48,100 @@
  z-index: 2;
  top: 0;
  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
- font-size: 0.98em;
 }
-.window .windowContent .imgViewer .dummyComponent .imgWindow {
+.window .windowContent .imgViewer .dummyComponent .relativeComponent {
+ position: relative;
+ height: 100%;
+ width: 100%;
+ font-size: 100%;
+}
+.window
+ .windowContent
+ .imgViewer
+ .dummyComponent
+ .relativeComponent
+ .imgWindow {
  position: absolute;
- height: 140px;
- width: 125px;
+ height: 65%;
+ width: 30%;
  top: 55%;
  left: 22.7%;
  transform: translate(-50%, -50%);
 }
-.window .windowContent .imgViewer .dummyComponent .imgWindow img {
+.window
+ .windowContent
+ .imgViewer
+ .dummyComponent
+ .relativeComponent
+ .imgWindow
+ img {
  height: 100%;
  width: 100%;
  object-fit: cover;
 }
-.window .windowContent .imgViewer .dummyComponent .userID {
+.window .windowContent .imgViewer .dummyComponent .relativeComponent .userID {
+ position: absolute;
+ z-index: 2;
+ top: 33%;
+ left: 65%;
+ transform: translate(0%, -50%);
+}
+.window .windowContent .imgViewer .dummyComponent .relativeComponent .name {
+ position: absolute;
+ z-index: 2;
+ top: 42.5%;
+ left: 65%;
+ transform: translate(0%, -50%);
+}
+.window .windowContent .imgViewer .dummyComponent .relativeComponent .DOB {
  position: absolute;
 
- width: 100%;
  z-index: 2;
- top: 4em;
- left: 17em;
+ top: 54%;
+ left: 65%;
+ transform: translate(0%, -50%);
 }
-.window .windowContent .imgViewer .dummyComponent .name {
+.window .windowContent .imgViewer .dummyComponent .relativeComponent .Email {
  position: absolute;
 
- width: 100%;
  z-index: 2;
- top: 5.55em;
- left: 17em;
+ top: 64%;
+ left: 65%;
+ transform: translate(0%, -50%);
 }
-.window .windowContent .imgViewer .dummyComponent .DOB {
- position: absolute;
-
- width: 100%;
- z-index: 2;
- top: 7.1em;
- left: 17em;
-}
-.window .windowContent .imgViewer .dummyComponent .Email {
- position: absolute;
-
- width: 100%;
- z-index: 2;
- top: 8.6em;
- left: 17em;
-}
-.window .windowContent .imgViewer .dummyComponent .Address {
+.window .windowContent .imgViewer .dummyComponent .relativeComponent .Address {
  position: absolute;
 
  width: 30%;
  z-index: 2;
- top: 10.5em;
- left: 17em;
+ top: 75%;
+ left: 65%;
+ transform: translate(0%, -50%);
  line-height: 0.8em;
+}
+
+@media screen and (max-width: 530px) {
+ .window .windowContent .imgViewer {
+  width: 100%;
+ }
+ .window .windowContent .imgViewer img {
+  width: 100%;
+ }
+ .window h2 {
+  font-size: 6vw;
+ }
+ .window .windowContent .imgViewer .dummyComponent .relativeComponent {
+  font-size: 2.93vw;
+ }
+ .window button {
+  font-size: 2.93vw;
+ }
+ .window .windowContent i {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  font-size: 4vw;
+  cursor: pointer;
+ }
 }

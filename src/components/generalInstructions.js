@@ -32,19 +32,25 @@ export const GeneralInstructions = () => {
  return (
   <>
    <div className="genInfo">
-    <div className="textInfo">
-     <h2>Some of the General information of the user</h2>
-     <input type="text" id="name" placeholder="User name" />
-     <input type="text" id="id" placeholder="User Id" />
-     <input type="date" id="DOB" />
-     <input type="email" id="email" placeholder="example@gmail.com" />
-     <input type="text" id="address" placeholder="Address" />
+    <h2>Some of the General information of the user</h2>
+    <div className="box">
+     <div className="textInfo">
+      <input type="text" id="name" placeholder="User name" />
+      <input type="text" id="id" placeholder="User Id" />
+      <input type="date" id="DOB" />
+      <input type="email" id="email" placeholder="example@gmail.com" />
+      <input type="text" id="address" placeholder="Address" />
+     </div>
+     <div className="aside">
+      <ImgSection id="personal" h4="Drag n Drop Photo here!" />
+     </div>
     </div>
-    <ImgSection id="personal" h4="Drag n Drop Photo here!" />
    </div>
 
    <hr />
-   <button onClick={bake}>Submit</button>
+   <button onClick={bake} id="submit">
+    Submit
+   </button>
    <FloatingWindow display={window} close={closeWindow} />
   </>
  );

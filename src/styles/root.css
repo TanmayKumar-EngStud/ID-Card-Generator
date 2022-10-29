@@ -10,12 +10,13 @@ body {
   rgba(168, 239, 241, 0.8),
   rgba(112, 164, 170, 0.551)
  );
+ width: 100vw;
 }
 
 .Heading {
  text-align: center;
  font-weight: bold;
- font-size: 4em;
+ font-size: 8vw;
 }
 
 .mainDiv {
@@ -49,32 +50,16 @@ body {
  margin-right: 1em;
  color: rgb(78, 77, 77);
 }
-.genInfo,
-.orgInfo {
+.genInfo {
  display: flex;
- gap: 10px;
+ flex-direction: column;
+ gap: 2em;
+}
+.genInfo .box {
+ display: flex;
+ gap: 2em;
  justify-content: space-between;
  align-items: center;
-}
-/*                  Horizontal rule Styling                  */
-
-.getInfo hr {
- overflow: visible; /* For IE */
- padding: 0;
- margin-top: 3.5em;
- border: none;
- border-top: medium double #333;
- color: #333;
- text-align: center;
-}
-.getInfo hr:after {
- content: "§";
- display: inline-block;
- position: relative;
- top: -0.7em;
- font-size: 1.5em;
- padding: 0 0.25em;
- background: white;
 }
 
 /*                  General and organization Information                        */
@@ -84,7 +69,7 @@ body {
  justify-content: left;
  flex-direction: column;
  gap: 10px;
- width: 30em;
+ width: 20em;
 }
 
 .genInfo .textInfo input,
@@ -100,44 +85,49 @@ body {
 }
 
 .genInfo h2 {
- margin-top: 45px;
+ margin-top: 1.5em;
 }
 /*                  Designing the image section                  */
-.mainDiv .imgInfo {
+.mainDiv .aside {
+ display: flex;
+ width: 60%;
+ justify-content: center;
+}
+.mainDiv .aside .imgInfo {
  display: flex;
  position: relative;
  align-items: center;
  justify-content: space-evenly;
  flex-direction: column;
- height: 350px;
- width: 300px;
+ padding: 5px;
+ height: 15em;
+ width: 15em;
  text-align: center;
  border: 3px dotted rgb(49, 207, 207);
  border-radius: 5px;
- margin-right: 55px;
 }
-.mainDiv .imgInfo i {
+.mainDiv .aside .imgInfo i {
  color: rgb(49, 207, 207);
- font-size: 45px;
+ font-size: 3em;
 }
-.mainDiv .imgInfo.active {
+.mainDiv .aside .imgInfo.active {
  border: none;
  box-shadow: 0px 0px 10px rgb(49, 207, 207);
 }
-.mainDiv .imgInfo img {
+.mainDiv .aside .imgInfo img {
  height: 100%;
  width: 100%;
  object-fit: cover;
 }
-.mainDiv .imgInfo .crossSign {
+.mainDiv .aside .imgInfo .crossSign {
  position: absolute;
  top: 0;
  right: 0;
 }
 .mainDiv .imgInfo .crossSign i {
- padding-top: 5px;
- padding-right: 5px;
- font-size: 25px;
+ padding-top: 0.5em;
+ padding-right: 0.5em;
+ font-size: 2em;
  cursor: pointer;
 }
 /*                  Ending Submit button                  */
@@ -155,4 +145,100 @@ button:hover {
 }
 button:active {
  border: 1px solid whitesmoke;
+}
+
+/*                    Making Page responsive                */
+@media screen and (max-width: 560px) {
+ /* Deisgning the heading section */
+ .Heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5em;
+ }
+
+ .headDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 5px;
+ }
+ .headDiv .Logo {
+  text-align: left;
+  font-size: 4em;
+  color: rgba(74, 176, 201, 0.98);
+ }
+ .headDiv .title {
+  font-size: 1.7em;
+ }
+ /* Designing the genInfo Section */
+ .mainDiv .genInfo .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+ }
+ .genInfo .box .textInfo h2 {
+  font-size: 1.6em;
+  text-align: left;
+ }
+ .genInfo .box .textInfo {
+  width: 100%;
+ }
+ /* Designing the imgInfo section */
+ .mainDiv .box .aside {
+  align-self: center;
+  margin-right: 0px;
+  width: 100%;
+ }
+ /* Ending button section */
+ button#submit {
+  width: 100%;
+ }
+}
+@media screen and (max-width: 400px) {
+ /* Designing the heading section */
+
+ .Heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+ }
+ .headDiv {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px 5px;
+ }
+ .headDiv .Logo {
+  text-align: left;
+  font-size: 3em;
+  color: rgba(74, 176, 201, 0.98);
+ }
+ .headDiv .title {
+  font-size: 1.3em;
+ }
+ /* Designing the genInfo Section */
+ .mainDiv .genInfo .box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ }
+ .genInfo .box .textInfo {
+  width: 100%;
+ }
+ .genInfo .box .textInfo h2 {
+  font-size: 1.4em;
+  text-align: left;
+ }
+ /* Designing the imgInfo section */
+ .mainDiv .box .aside {
+  align-self: center;
+  width: 100%;
+ }
+ .mainDiv .box .aside .imgInfo {
+  width: 100%;
+ }
+ button#submit {
+  width: 100%;
+ }
 }
