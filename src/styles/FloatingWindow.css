@@ -54,6 +54,7 @@
  height: 100%;
  width: 100%;
  font-size: 100%;
+ word-wrap: break-word;
 }
 .window
  .windowContent
@@ -83,36 +84,34 @@
  position: absolute;
  width: 30%;
  z-index: 2;
- top: 35.5%;
+ top: 30.5%;
  left: 65%;
- transform: translate(0%, -100%);
+
  line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .name {
  position: absolute;
  width: 30%;
  z-index: 2;
- top: 46%;
+ top: 40%;
  left: 65%;
- transform: translate(0%, -100%);
  line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .DOB {
  position: absolute;
  width: 30%;
  z-index: 2;
- top: 57%;
+ top: 51%;
  left: 65%;
- transform: translate(0%, -100%);
  line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .Email {
  position: absolute;
  width: 30%;
  z-index: 2;
- top: 67%;
+ top: 61.5%;
  left: 65%;
- transform: translate(0%, -100%);
+
  line-height: 0.8em;
 }
 .window .windowContent .imgViewer .dummyComponent .relativeComponent .Address {
@@ -120,9 +119,9 @@
 
  width: 30%;
  z-index: 2;
- top: 77.5%;
+ top: 72.5%;
  left: 65%;
- transform: translate(0%, -100%);
+
  line-height: 0.8em;
 }
 

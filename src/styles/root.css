@@ -71,7 +71,19 @@ body {
  gap: 10px;
  width: 20em;
 }
-
+.genInfo .textInfo .dob {
+ display: flex;
+ justify-content: space-between;
+ font-weight: 600;
+}
+.genInfo .textInfo .dob p {
+ margin: auto 15px;
+}
+@media screen and (min-width: 560px) {
+ .genInfo .textInfo .dob p {
+  margin-left: auto 0px;
+ }
+}
 .genInfo .textInfo input,
 .orgInfo .textInfo input {
  padding: 5px 10px;

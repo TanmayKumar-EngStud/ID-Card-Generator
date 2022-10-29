@@ -37,7 +37,10 @@ export const GeneralInstructions = () => {
      <div className="textInfo">
       <input type="text" id="name" placeholder="User name" />
       <input type="text" id="id" placeholder="User Id" />
-      <input type="date" id="DOB" />
+      <div className="dob">
+       <p>DOB:</p>
+       <input type="date" id="DOB" />
+      </div>
       <input type="email" id="email" placeholder="example@gmail.com" />
       <input type="text" id="address" placeholder="Address" />
      </div>
