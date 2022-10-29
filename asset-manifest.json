@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ID-Card-Generator/static/css/main.883eba96.css",
-    "main.js": "/ID-Card-Generator/static/js/main.35d8ef54.js",
+    "main.css": "/ID-Card-Generator/static/css/main.14b49ff6.css",
+    "main.js": "/ID-Card-Generator/static/js/main.1c4ba111.js",
     "index.html": "/ID-Card-Generator/index.html",
-    "main.883eba96.css.map": "/ID-Card-Generator/static/css/main.883eba96.css.map",
-    "main.35d8ef54.js.map": "/ID-Card-Generator/static/js/main.35d8ef54.js.map"
+    "main.14b49ff6.css.map": "/ID-Card-Generator/static/css/main.14b49ff6.css.map",
+    "main.1c4ba111.js.map": "/ID-Card-Generator/static/js/main.1c4ba111.js.map"
   },
   "entrypoints": [
-    "static/css/main.883eba96.css",
-    "static/js/main.35d8ef54.js"
+    "static/css/main.14b49ff6.css",
+    "static/js/main.1c4ba111.js"
   ]
 }
