@@ -2,7 +2,7 @@ import "../styles/FloatingWindow.css";
 import { useSelector } from "react-redux";
 
 // importing sample id card image
-import IDcard from "./IDcard.png";
+import IDcard from "../images/IDcard.png";
 export const FloatingWindow = (props) => {
  let data = useSelector((state) => state.user);
  let close = () => {
