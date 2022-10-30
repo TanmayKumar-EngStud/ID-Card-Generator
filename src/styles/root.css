@@ -14,7 +14,7 @@ body {
 }
 @media screen and (max-height: 100vh) {
  body {
-  height: 100vw;
+  height: 100vh;
  }
 }
 .Heading {
