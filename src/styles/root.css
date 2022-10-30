@@ -11,18 +11,20 @@ body {
   rgba(112, 164, 170, 0.551)
  );
  width: 100vw;
+ padding: 10px 0px;
+ min-height: 100vh;
 }
-@media screen and (max-height: 100vh) {
- body {
-  height: 100vh;
- }
-}
+
 .Heading {
  text-align: center;
  font-weight: bold;
- font-size: 8vw;
+ font-size: 4vw;
 }
-
+@media screen and (max-width: 1130px) {
+ .Heading {
+  font-size: 5vw;
+ }
+}
 .mainDiv {
  box-shadow: 0 0 5px;
  margin: 10px auto;
