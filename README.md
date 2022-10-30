@@ -1,4 +1,4 @@
-# This is a small react application for Generading a dummy ID card
+# This is a small react application for Generating a dummy ID card
 ## For Demo: [Click me](https://tanmaykumar-engstud.github.io/ID-Card-Generator/)
 
 #### Installation: 
