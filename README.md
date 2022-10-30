@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# This is a small react application for Generading a dummy ID card
+## For Demo: [Click me](https://tanmaykumar-engstud.github.io/ID-Card-Generator/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Installation: 
+1. you would need npm installed 
+2. run the command `npm install`, this will install all the dependencies that are stated inside `package.json`
 
-## Available Scripts
+#### Development so far: 
+1. Project is bootstraped with `create-react-app` 
+2. In order to share the details from one component to another, `react-redux` is used
+3. Later `react-router` is also used to create different links (however more work is to be done regarding to this)
+4. Project is also made Responsive to all the devices (phone, laptop)
+5. Recently there is an issue with `react-pdf` it is causing some error inside **node_modules**
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Building blocks of this project: 
+ There are 6 sections inside the src files :
+ 1. **components** : This consists of all the components that are used inside the website.
+ 2. **images** : This consists of image that is used inside website.
+ 3. **Pages** : This consists of javascript files, each file represent a separate page. These pages uses elements from the `component`'s tab.
+ 4. **storage** : This consists of 1 prime file `index.js` + all the other files that will be unique storage sections ( these storage sections will store the data and will be assigned their own actions, for the modifications of the data being stored ) all of these will be pooled into the `index.js` file which is later called inside `components`.
+ 5. **Styles** : This will consist of all the designing and styling of the components.
