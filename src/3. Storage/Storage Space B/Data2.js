@@ -3,13 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 // Here is the user data.
 export const dataSlice = createSlice({
  name: "data",
- initialState: {},
+ initialState: {
+  release: false,
+ },
  reducers: {
   // All the general operations. ( somewhat CRUD operations)
-  replace: (state, action) => {
+  replace2: (state, action) => {
    state = action.payload;
   },
-  add: (state, action) => {
+  add2: (state, action) => {
    // this will also re-write!!
    let temp = state;
    for (let x in action.payload) {
@@ -17,10 +19,10 @@ export const dataSlice = createSlice({
    }
    state = temp;
   },
-  remove: (state) => {
+  remove2: (state) => {
    state = {};
   },
-  removeOnly: (state, action) => {
+  removeOnly2: (state, action) => {
    let temp = {};
    for (let x in state) {
     if (action.payload[x] === undefined) {
@@ -31,5 +33,5 @@ export const dataSlice = createSlice({
   },
  },
 });
-export const { replace, add, remove, removeOnly } = dataSlice.actions;
+export const { replace2, add2, remove2, removeOnly2 } = dataSlice.actions;
 export default dataSlice.reducer;

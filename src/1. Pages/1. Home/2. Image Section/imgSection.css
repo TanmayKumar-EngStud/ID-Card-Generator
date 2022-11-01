@@ -1,0 +1,52 @@
+.imgInfo {
+ display: flex;
+ position: relative;
+
+ align-items: center;
+ justify-content: space-evenly;
+
+ flex-direction: column;
+
+ padding: 5px;
+
+ height: 15em;
+ width: 15em;
+
+ text-align: center;
+
+ border: 3px dotted rgb(49, 207, 207);
+ border-radius: 5px;
+}
+.imgInfo i {
+ color: rgb(49, 207, 207);
+
+ font-size: 3em;
+}
+.imgInfo.active {
+ border: none;
+ box-shadow: 0px 0px 10px rgb(49, 207, 207);
+}
+
+.imgInfo img {
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+}
+
+.imgInfo .crossSign {
+ position: absolute;
+ top: 0;
+ right: 0;
+}
+
+.crossSign i {
+ padding-top: 0.5em;
+ padding-right: 0.5em;
+ font-size: 1.4em;
+ color: rgb(220, 23, 23);
+ cursor: pointer;
+}
+
+.crossSign i:hover {
+ size: 1.5;
+}

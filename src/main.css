@@ -15,7 +15,6 @@ body {
  background: linear-gradient(245deg, rgb(229, 220, 220), white);
 }
 #root {
- display: flex;
  position: relative;
 }
 /* My nomenclature for styling is: 

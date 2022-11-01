@@ -1,0 +1,176 @@
+.modal {
+ position: absolute;
+
+ height: auto;
+ width: auto;
+
+ padding: 1em;
+ transform: translate(-50%, -50%);
+ top: 50%;
+ left: 50%;
+
+ flex-direction: column;
+
+ background: rgb(171, 211, 171);
+ border-radius: 5px;
+ z-index: 2;
+}
+.modal button {
+ background: whitesmoke;
+ width: 7em;
+ padding: 5px;
+ margin: 15px 0px;
+ border-radius: 5px;
+ border: 1px solid black;
+ outline: none;
+ cursor: pointer;
+}
+.modal button:hover {
+ box-shadow: 0px 0px 3px black;
+}
+.modal button:active {
+ border: 1px solid whitesmoke;
+}
+.imgGrp {
+ display: flex;
+ position: relative;
+ height: 50%;
+ gap: 1em;
+}
+.id_card {
+ position: relative;
+
+ border: 1px solid black;
+}
+
+.dummy {
+ position: absolute;
+ top: 0;
+}
+
+.id_card img {
+ height: 100%;
+ width: 100%;
+}
+
+div#img {
+ height: 34%;
+ width: 49.3%;
+ transform: translate(-50%, -50%);
+ top: 47.1%;
+ left: 49.9%;
+ border-radius: 10px;
+
+ background: rgba(217, 115, 115, 0.551);
+}
+
+div#img img {
+ height: 100%;
+ width: 100%;
+
+ object-fit: cover;
+
+ border-radius: 10px;
+}
+div#name {
+ display: flex;
+
+ align-items: center;
+ justify-content: center;
+
+ top: 69.85%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+
+ height: 4.5%;
+ width: 80%;
+
+ font-size: 1rem;
+ color: #0055a0;
+}
+
+div#position {
+ display: flex;
+
+ align-items: center;
+ justify-content: center;
+
+ top: 76.5%;
+ left: 50.15%;
+
+ transform: translate(-50%, -50%);
+
+ height: 4.5%;
+ width: 46.45%;
+
+ font-size: 1rem;
+
+ text-align: center;
+}
+div#id {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ top: 40.85%;
+ left: 65.2%;
+ transform: translate(-50%, -50%);
+ /* background: rgba(255, 0, 0, 0.726); */
+ height: 2.67%;
+ width: 12.81%;
+ font-size: 0.653rem;
+}
+div#phone {
+ display: flex;
+
+ align-items: center;
+ justify-content: center;
+
+ top: 45.8%;
+ left: 58.8%;
+
+ transform: translate(-50%, -50%);
+ /* background: rgba(255, 0, 0, 0.726); */
+
+ height: 2.67%;
+ width: 35.6%;
+
+ font-size: 0.653rem;
+}
+div#bloodGroup {
+ display: flex;
+
+ align-items: center;
+ justify-content: center;
+
+ top: 50.7%;
+ left: 67%;
+
+ transform: translate(-50%, -50%);
+ /* background: rgba(255, 0, 0, 0.726); */
+
+ height: 2.67%;
+ width: 9.6%;
+
+ font-size: 0.653rem;
+}
+div#emergencyPh {
+ display: flex;
+
+ align-items: center;
+ justify-content: center;
+
+ top: 74.82%;
+ left: 21.76%;
+
+ transform: translate(-50%, -50%);
+ /* background: rgba(255, 0, 0, 0.726); */
+
+ height: 2.35%;
+ width: 34.45%;
+
+ font-size: 0.653rem;
+}
+.buttonGrp {
+ display: flex;
+ justify-content: space-between;
+}
