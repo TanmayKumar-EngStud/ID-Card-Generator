@@ -26,8 +26,8 @@
  border: none;
  box-shadow: 0px 0px 10px rgb(49, 207, 207);
 }
-
-.imgInfo img {
+/* ******************Here I have to make changes ******************* */
+.imgInfo #imgProfile {
  height: 100%;
  width: 100%;
  object-fit: cover;
@@ -50,3 +50,41 @@
 .crossSign i:hover {
  size: 1.5;
 }
+.imgInfo.on {
+ padding: 0;
+}
+
+.edit-button {
+ position: absolute;
+ display: flex;
+
+ align-items: center;
+ justify-content: center;
+ background: rgb(153, 162, 153);
+
+ transform: translate(-100%, -100%);
+ transition-duration: 0.3s;
+ height: 2em;
+ width: 2em;
+ top: 100%;
+ left: 100%;
+ border-radius: 500px;
+}
+.edit-button i {
+ font-size: 1em;
+ color: rgb(65, 65, 65);
+}
+.edit-button:hover,
+.edit-button:focus {
+ height: 2.3em;
+ width: 2.3em;
+ font-size: 1.5em;
+ box-shadow: 0px 0px 2px rgb(255, 255, 255);
+}
+/* .window {
+ position: absolute;
+ opacity: 0.7;
+ top: 100%;
+ left: 95%;
+ transform: translate(-50%, -100%);
+} */

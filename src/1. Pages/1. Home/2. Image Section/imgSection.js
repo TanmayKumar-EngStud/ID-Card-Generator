@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { add1, remove1 } from "../../../3. Storage/Storage Space A/Data1.js";
 import { add2, replace2 } from "../../../3. Storage/Storage Space B/Data2.js";
-// Styling
+
+// importing elements and style.
+import CropWindow from "./1. Cropper Window/cropWindow.js";
 import "./imgSection.css";
 const ImgSection = (props) => {
  let [dataURL, setDataURL] = useState("");
+ const [originalURL, setOriginalURL] = useState("");
+ const [imgStyle, setImgStyle] = useState(null);
  const dispatch = useDispatch();
  // 1. Dragging
  let highlight = (event) => {
@@ -18,7 +22,6 @@ const ImgSection = (props) => {
   event.target.classList.remove("active");
  };
  // 3. uploading the drag correctly
-
  const upload = (event) => {
   event.preventDefault();
   event.stopPropagation();
@@ -32,6 +35,7 @@ const ImgSection = (props) => {
   fileReader.onload = () => {
    let fileURL = fileReader.result;
    setDataURL(fileURL);
+   setOriginalURL(fileURL);
    dispatch(add1({ URL: fileURL }));
   };
   fileReader.readAsDataURL(file);
@@ -54,12 +58,27 @@ const ImgSection = (props) => {
   fileReader.onload = () => {
    let fileURL = fileReader.result;
    setDataURL(fileURL);
+   setOriginalURL(fileURL);
    dispatch(add1({ URL: fileURL }));
   };
   fileReader.readAsDataURL(file);
   event.target.classList.remove("active");
   props.ack(true);
  };
+ const [release, setRelease] = useState(false);
+ let sickEdits = () => {
+  setRelease(true);
+ };
+ let remoteClose = () => {
+  setRelease(false);
+ };
+ useEffect(() => {
+  const image = document.querySelector("#imgProfile");
+  if (imgStyle != null) {
+   image.src = imgStyle;
+   dispatch(add1({ URL: imgStyle }));
+  }
+ }, [imgStyle, dispatch]);
 
  if (dataURL === "") {
   return (
@@ -81,11 +100,21 @@ const ImgSection = (props) => {
   dispatch(add2({ release: true }));
  }
  return (
-  <div className="imgInfo" id="User photo">
+  <div className="imgInfo on" id="User photo">
+   <div className="edit-button" onClick={sickEdits}>
+    <i className="fa-regular fa-pen-to-square" />
+   </div>
    <div className="crossSign">
     <i className="fa-solid fa-circle-xmark" onClick={erase}></i>
    </div>
-   <img src={dataURL} alt="User's Profile Photo" id="imgProfile" />
+   <img src={dataURL} alt="" id="imgProfile" />
+
+   <CropWindow
+    imgSrc={originalURL}
+    activate={release}
+    deactivate={remoteClose}
+    getData={(style) => setImgStyle(style)}
+   />
   </div>
  );
 };

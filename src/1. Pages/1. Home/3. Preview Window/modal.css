@@ -39,10 +39,16 @@
 }
 .id_card {
  position: relative;
-
+ font-family: Helvetica, sans-serif;
+ font-weight: 700;
  border: 1px solid black;
 }
-
+.id_card.front {
+ text-align: center;
+}
+.id_card.back {
+ text-align: left;
+}
 .dummy {
  position: absolute;
  top: 0;
@@ -91,9 +97,8 @@ div#name {
 
 div#position {
  display: flex;
-
- align-items: center;
  justify-content: center;
+ align-items: center;
 
  top: 76.5%;
  left: 50.15%;
@@ -110,7 +115,7 @@ div#position {
 div#id {
  display: flex;
  align-items: center;
- justify-content: center;
+
  top: 40.85%;
  left: 65.2%;
  transform: translate(-50%, -50%);
@@ -123,7 +128,6 @@ div#phone {
  display: flex;
 
  align-items: center;
- justify-content: center;
 
  top: 45.8%;
  left: 58.8%;
@@ -140,7 +144,6 @@ div#bloodGroup {
  display: flex;
 
  align-items: center;
- justify-content: center;
 
  top: 50.7%;
  left: 67%;
@@ -157,7 +160,6 @@ div#emergencyPh {
  display: flex;
 
  align-items: center;
- justify-content: center;
 
  top: 74.82%;
  left: 21.76%;
