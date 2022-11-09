@@ -58,6 +58,7 @@ export async function canvasPreview(
   0,
   0,
   image.naturalWidth,
+
   image.naturalHeight
  );
 

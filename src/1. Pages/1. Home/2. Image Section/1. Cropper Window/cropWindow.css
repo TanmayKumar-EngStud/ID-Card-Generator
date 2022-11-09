@@ -1,50 +1,75 @@
 .cropWindow {
- position: absolute;
- background-color: rgba(156, 156, 219, 0.828);
- border-radius: 5px;
- border: 1px solid rgba(0, 0, 0, 0.596);
- box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.547);
+   position: absolute;
+   background-color: rgba(156, 156, 219, 0.828);
+   border-radius: 5px;
+   border: 1px solid rgba(0, 0, 0, 0.596);
+   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.547);
 }
 .cropWindow .heading {
- margin: 1em;
+   margin: 1em;
 }
 .cropWindow .cross {
- position: absolute;
- top: 0%;
- left: 100%;
- transform: translateX(-100%);
+   position: absolute;
+   top: 0%;
+   left: 100%;
+   transform: translateX(-100%);
 }
 .cropWindow .cross i {
- font-size: 1em;
- color: rgb(218, 13, 13);
- padding: 0.5em;
+   font-size: 1em;
+   color: rgb(218, 13, 13);
+   padding: 0.5em;
 }
 .cropWindow button i {
- font-size: 1em;
+   font-size: 1em;
 }
 
 .cropWindow img {
- width: 255px;
+   width: 255px;
 
- object-fit: cover;
+   object-fit: cover;
 }
 canvas {
- margin: 5px;
+   margin: 5px;
 }
 .cropWindow .construction {
- margin-top: 1em;
- display: flex;
+   margin-top: 1em;
+   display: flex;
 
- padding: 1em;
+   padding: 1em;
 
- justify-content: space-around;
- gap: 1em;
+   justify-content: space-around;
+   gap: 1em;
 }
 .cropWindow .construction .elem {
- display: flex;
- align-items: center;
- gap: 1em;
+   display: flex;
+   align-items: center;
+   gap: 1em;
 }
 .cropWindow canvas {
- display: none;
+   display: none;
+}
+
+datalist {
+   position: absolute;
+   display: flex;
+   flex-direction: row;
+
+   top: 86%;
+   justify-content: space-between;
+
+   width: 200px;
+}
+#tickmarks1 {
+   left: 13%;
+}
+#tickmarks2 {
+   left: 61%;
+}
+option {
+   padding: 0;
+}
+
+input[type="range"] {
+   width: 200px;
+   margin: 0;
 }
